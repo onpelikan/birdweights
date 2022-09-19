@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>811950070445-dmekdm2qocq702snq8h1b40navklel1e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.811950070445-dmekdm2qocq702snq8h1b40navklel1e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB_fm5cs0VD-G4WXZLgLzHmg3xW_jglF3Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>811950070445</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.birdsWeights</string>
+	<key>PROJECT_ID</key>
+	<string>bird-weights</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bird-weights.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:811950070445:ios:054738b7b191ecf1d74424</string>
+	<key>DATABASE_URL</key>
+	<string>https://bird-weights-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

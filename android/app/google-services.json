@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "811950070445",
+    "firebase_url": "https://bird-weights-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "bird-weights",
+    "storage_bucket": "bird-weights.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811950070445:android:24b2638ea7fc16ffd74424",
+        "android_client_info": {
+          "package_name": "com.onpelikan.birds_weights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811950070445-osl3jof7st3k2h4ml70gis6kkusso7bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGshSEZcPRER8NcvhMRdVue3tuy0sbwBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811950070445-osl3jof7st3k2h4ml70gis6kkusso7bu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "811950070445-dmekdm2qocq702snq8h1b40navklel1e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.birdsWeights"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
