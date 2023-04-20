@@ -101,6 +101,10 @@ class _SignInState extends State<SignIn> {
                         ),
                         const SizedBox(height: 48),
                         ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(255, 16, 105,
+                                0), // Change the background color of the button
+                          ),
                           onPressed: _signIn,
                           child: const Text('Přihlásit'),
                         ),
