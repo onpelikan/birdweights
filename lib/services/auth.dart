@@ -3,9 +3,12 @@ import 'package:birds_weights/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  static const String _username = "vazeni@oborazleby.cz";
+  static const String _userpass = "Obora2023";
 
   //create user object based on firebaseuser
   AppUser? _userFromFbUser(User? user) {
@@ -36,7 +39,8 @@ class AuthService {
   }
 
   // sign in with email and pass
-  Future signInWithEmailAndPassword(String email, String password) async {
+  Future signInWithEmailAndPassword(
+      {String email = _username, String password = _userpass}) async {
     try {
       UserCredential result = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
@@ -50,19 +54,33 @@ class AuthService {
 
   // sign in with google
   Future signInGoogle() async {
-    final googleSignIn = GoogleSignIn();
+    if (kIsWeb) {
+      return _signInGoogleWeb();
+    } else {
+      return _signInGoogleApp();
+    }
+  }
 
-    final googleUser = await googleSignIn.signIn();
-    if (googleUser == null) return null;
+  Future _signInGoogleWeb() async {
+    GoogleAuthProvider googleProvider = GoogleAuthProvider();
+    googleProvider.addScope('https://www.googleapis.com/auth/cloud-platform');
+    _auth.signInWithRedirect(googleProvider);
+    return _userFromFbUser((await _auth.getRedirectResult()).user);
+  }
 
-    final googleAuth = await googleUser.authentication;
-
+  Future _signInGoogleApp() async {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn(
+            clientId:
+                '811950070445-osl3jof7st3k2h4ml70gis6kkusso7bu.apps.googleusercontent.com')
+        .signIn();
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
     final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
-
-    await FirebaseAuth.instance.signInWithCredential(credential);
-
-    return _userFromGoogleUser(googleUser);
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+    final u = await _auth.signInWithCredential(credential);
+    return _userFromFbUser(u.user);
   }
 
   //register with email and pass

@@ -1,0 +1,31 @@
+{
+    // Pro informace o možných atributech použijte technologii IntelliSense.
+    // Umístěním ukazatele myši zobrazíte popisy existujících atributů.
+    // Další informace najdete tady: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "birds_weights",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-hostname",
+                "localhost",
+                "--web-port",
+                "5000",
+            ]
+        },
+        {
+            "name": "birds_weights (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "birds_weights (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

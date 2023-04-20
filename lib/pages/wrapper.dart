@@ -18,7 +18,7 @@ class Wrapper extends StatelessWidget {
       return StreamProvider<List<WeightDay>>.value(
           value: DatabaseService().weights,
           initialData: const [],
-          child: Home());
+          child: const Home());
     }
   }
 }

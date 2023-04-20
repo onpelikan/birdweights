@@ -15,7 +15,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="$FLUTTER_BASE_HREF">
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -35,10 +35,9 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
+    var serviceWorkerVersion = '2553063440';
   </script>
   <!-- This script adds the flutter initialization JS code -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="flutter.js" defer></script>
   
 </head>
@@ -57,23 +56,6 @@
         return appRunner.runApp();
       });
     });
-  </script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAooCdWsuysITEQCXUgRzzcZtA8Miq4YNU",
-      authDomain: "bird-weights.firebaseapp.com",
-      databaseURL: "https://bird-weights-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "bird-weights",
-      storageBucket: "bird-weights.appspot.com",
-      messagingSenderId: "811950070445",
-      appId: "1:811950070445:web:984882e638d017f2d74424",
-      measurementId: "G-LX90WDSFVP"
-    };
-
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
   </script>
 </body>
 
