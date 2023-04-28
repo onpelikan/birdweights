@@ -1,5 +1,6 @@
 import 'package:birds_weights/models/weight_day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 
 class DatabaseService {
   static final DatabaseService _database = DatabaseService._();
@@ -40,7 +41,9 @@ class DatabaseService {
       if (makeNamesCompleted(data)) {
         w = WeightDay(getDateTimeFromUid(doc.id), data);
       } else {
-        print("**** Chyba v prijatych datech. Nesedi jmena.");
+        if (kDebugMode) {
+          print("**** Chyba v prijatych datech. Nesedi jmena.");
+        }
       }
     }
     return w;

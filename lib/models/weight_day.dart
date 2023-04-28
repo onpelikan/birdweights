@@ -20,6 +20,7 @@ var birdnames = [
   "Kryštof",
   "Harry",
   "Henry",
+  "Luky",
   "Ludva",
   "Čárlie",
   "Sofie",
